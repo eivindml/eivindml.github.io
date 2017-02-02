@@ -44,6 +44,25 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+body {
+  font-family: "SF Mono", "Menlo", "Courier", monospace;
+  background-color: #F7F7F7;
+  color: #262626;
+  padding: 15px; }
+
+p {
+  line-height: 1.5em; }
+
+a {
+  color: #262626;
+  transition: color 400ms ease-in-out;
+  padding-bottom: 4px; }
+  a:hover {
+    color: orangered; }
+
+h2 {
+  font-weight: bold; }
+
 polygon {
   fill: none;
   stroke: #262626;
@@ -64,24 +83,23 @@ polygon {
   50% {
     transform: translateY(50px) scaleY(0.96) scaleX(1.05); } }
 
-body {
-  font-family: 'SF Mono', "Menlo", "Courier", monospace;
-  background-color: #F7F7F7;
-  color: #262626;
-  padding: 15px; }
+.fox {
+  position: fixed;
+  top: 0;
+  font-size: 60px;
+  animation-name: rain;
+  animation-duration: 4s; }
 
-p {
-  line-height: 1.5em; }
-
-a {
-  color: #262626;
-  transition: color 400ms ease-in-out;
-  padding-bottom: 4px; }
-  a:hover {
-    color: orangered; }
-
-h2 {
-  font-weight: bold; }
+@keyframes rain {
+  0% {
+    transform: rotate(19deg) scale(0.2, 0.2); }
+  55% {
+    transform: scale(0.5, 0.5) rotate(-29deg); }
+  80% {
+    transform: rotate(32deg); }
+  100% {
+    transform: scale(1.2, 1.2) rotate(0deg);
+    top: calc(100vh + 250px); } }
 
 .section h2 {
   position: relative;
@@ -155,3 +173,20 @@ footer {
   body {
     padding-left: 0;
     padding-right: 0; } }
+
+.mirror {
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+  display: inline-block; }
+
+.gray {
+  color: #a6a6a6; }
+
+.lightgray {
+  color: #e5e5e5; }
+
+#fox {
+  text-decoration: none; }
